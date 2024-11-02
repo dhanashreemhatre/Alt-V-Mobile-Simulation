@@ -345,6 +345,42 @@
       </button>
     </div>
   </div>
+   <!-- Calendar App -->
+   <div id="calendarApp" class="calendar-app" style="display:none;">
+    <div class="calendar-header">
+      <div class="calendar-title">Calendar</div>
+      <div id="currentMonth"></div>
+      <div class="calendar-nav">
+        <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    
+    <div class="weekdays">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    
+    <div class="calendar-grid"></div>
+    
+    <button class="add-event">+</button>
+  </div>
+
+  <!-- Event Modal -->
+  <div class="event-modal">
+    <h3>Add Event</h3>
+    <input type="text" id="eventTitle" placeholder="Event title">
+    <input type="time" id="eventTime">
+    <div class="modal-buttons">
+      <button class="cancel">Cancel</button>
+      <button class="save">Save</button>
+    </div>
+  </div>
 
       </div>
 
