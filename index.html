@@ -9,16 +9,21 @@
   <body>
     <div id="smartphone">
       <div id="head">
-        <div id="clock"></div>
+        <div id="clock">
+          <div class="time"></div>
+        </div>
         <div id="notch"></div>
         <div id="headInfo">
+         
           <i class="fas fa-battery-full" id="battery"></i>
           <i class="fas fa-signal" id="signal"></i>
         </div>
       </div>
       <div id="homeScreen">
         <div id="apps">
-          <div class="app" id="appCalenderButton"></div>
+          <div class="app" id="appCalenderButton">
+            <i class="fas fa-calendar"></i>
+          </div>
           <div class="app" id="appWeatherButton">
             <i class="fas fa-cloud-sun"></i>
           </div>
@@ -28,15 +33,15 @@
           <div class="app" id="appAirplaneButton">
             <i class="fas fa-plane"></i>
           </div>
-		  <div class="app" id="appSettingsButton">
-			<i class="fas fa-cog"></i>
-		  </div>
-		  <div class="app" id="appGalleryButton">
-			<i class="fas fa-images"></i>
-		  </div>
-		  <div class="app" id="appWidgetsButton">
-			<i class="fas fa-th-large"></i>
-		  </div>
+          <div class="app" id="appSettingsButton">
+          <i class="fas fa-cog"></i>
+          </div>
+          <div class="app" id="appGalleryButton">
+          <i class="fas fa-images"></i>
+          </div>
+          <div class="app" id="appWidgetsButton">
+          <i class="fas fa-th-large"></i>
+          </div>
         </div>
         <div id="fav">
           <div class="app" id="appPhoneButton">
@@ -315,9 +320,9 @@
   <!-- Call Screen -->
   <div id="callScreen" style="display:none;">
     <div class="call-info">
-      <div class="caller-name">John Doe</div>
-      <div class="call-status">Calling...</div>
-      <div class="call-timer">00:00</div>
+      <div class="caller-name" style="text-align: center;">John Doe</div>
+      <div class="call-status" style="text-align: center;">Calling...</div>
+      <div class="call-timer" style="text-align: center;">00:00</div>
     </div>
     <div class="caller-avatar">
       <i class="fas fa-user"></i>

@@ -35,13 +35,14 @@ body {
 h5 {
 	text-align: center;
 	font-size: 1vw;
+  margin: 4% 0;
 }
 #smartphone {
 	color: var(--font);
 	background-color: var(--background);
 	position: absolute;
-	width: 15vw;
-	height: 30vw;
+	width: 20vw;
+	height: 80vh;
 	border: 0.2vw solid var(--border);
 	right: 2vw;
 	/* bottom: -29vw; */
@@ -98,10 +99,14 @@ input[type='text'] {
 	margin: 0.25vw 0;
 	background-color: var(--fav-dark);
 	border: 0;
-	padding: 0.25vw;
+	padding: 1vw 0.25vw;
 	color: var(--font);
 	border-radius: 0.25vw;
 	font-size: 0.75vw;
+}
+input[type='text']::placeholder{
+  padding: 0 2%;
+
 }
 #homeButton {
 	position: absolute;
@@ -131,25 +136,28 @@ input[type='text'] {
 	justify-content: center;
 }
 #apps {
-	display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 4% 8%;
+	/* display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: flex-start; */
 }
 #fav {
 	position: absolute;
 	bottom: 0;
 	width: calc(100% - 0.5vw);
 	margin: 0.25vw;
-	height: 3vw;
+	height: 4vw;
 	background-color: var(--fav);
 	border-radius: 1vw;
 }
 .app {
 	background-color: #000;
-	width: 2.75vw;
-	height: 2.75vw;
+	width: 3vw;
+	height: 3vw;
 	margin: 0.5vw;
 	border-radius: 0.5vw;
 	text-align: center;
@@ -163,10 +171,10 @@ input[type='text'] {
 	opacity: 0.75;
 }
 #fav > .app {
-	margin: 0.25vw;
-	width: 2.5vw;
-	height: 2.5vw;
-	line-height: 2.75vw;
+	margin: 0.5vw;
+	width: 3vw;
+	height: 3vw;
+	line-height: 3vw;
 }
 #appPhoneButton {
 	background-color: rgb(22, 109, 19);
@@ -183,14 +191,18 @@ input[type='text'] {
 #appChargeButton {
 	background-color: rgb(23, 153, 56);
 }
+#appCalenderButton{
+  background-color: rgb(166, 201, 210);
+}
 #appWeatherButton {
 	background-color: rgb(81, 158, 177);
 }
 #appGpsButton {
 	background-color: rgb(59, 112, 212);
 }
-#appCalenderButton {
-	background-color: rgb(51, 51, 51);
+
+#appGalleryButton{
+  background-color: rgb(212, 107, 59);
 }
 .contact {
 	cursor: pointer;
@@ -676,7 +688,8 @@ input[type='text'] {
   .favorite-contact {
     display: flex;
     align-items: center;
-    padding: 1vw;
+    justify-content: space-between;
+    padding: 0.5vw;
     border-bottom: 0.05vw solid var(--fav);
   }
 
@@ -695,7 +708,8 @@ input[type='text'] {
   .recent-call {
     display: flex;
     align-items: center;
-    padding: 1vw;
+    justify-content: space-between;
+    padding: 0.8vw;
     border-bottom: 0.05vw solid var(--fav);
   }
 
@@ -732,7 +746,6 @@ input[type='text'] {
 
   .contacts-search input {
     width: 100%;
-    padding: 0.8vw 1vw 0.8vw 3vw;
     border: none;
     border-radius: 1vw;
     background: var(--fav);
@@ -741,8 +754,12 @@ input[type='text'] {
   .contact-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1vw;
     border-bottom: 0.05vw solid var(--fav);
+  }
+  .contact-actions i{
+    margin: 0 4px;
   }
 
   .contact-avatar {
@@ -758,7 +775,6 @@ input[type='text'] {
 
   /* Keypad Screen */
   .keypad-display {
-    padding: 2vw;
     text-align: center;
     position: relative;
   }
@@ -845,6 +861,7 @@ input[type='text'] {
     width: 8vw;
     height: 8vw;
     background: var(--fav);
+    margin: 4% 0;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -856,8 +873,6 @@ input[type='text'] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
-    width: 100%;
-    max-width: 20vw;
   }
 
   .call-actions button {
@@ -867,6 +882,24 @@ input[type='text'] {
     border: none;
     background: var(--fav);
     cursor: pointer;
+  }
+  .add-contact-btn{
+    padding: 8px 16px;
+    margin-top: 4%;
+    font-size: 14px;
+
+  }
+  .add-favorite-btn{
+    padding: 8px 16px;
+    margin-top: 4%;
+    font-size: 14px;
+
+  }
+  .clear-recents-btn{
+    padding: 8px 16px;
+    margin-top: 4%;
+    font-size: 14px;
+
   }
 
   .end-call-btn {
