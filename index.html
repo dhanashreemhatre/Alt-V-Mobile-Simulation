@@ -242,6 +242,104 @@
 			  <button id="sendAttachment">Send</button>
 			</div>
 		  </div>
+		   <!-- Phone App Main Screen -->
+  <div id="phoneApp" style="display:none;">
+    <div class="phone-tabs">
+      <div class="tab active" data-tab="favorites">
+        <i class="fas fa-star"></i>
+        <span>Favorites</span>
+      </div>
+      <div class="tab" data-tab="recents">
+        <i class="fas fa-clock"></i>
+        <span>Recents</span>
+      </div>
+      <div class="tab" data-tab="contacts">
+        <i class="fas fa-address-book"></i>
+        <span>Contacts</span>
+      </div>
+      <div class="tab" data-tab="keypad">
+        <i class="fas fa-th"></i>
+        <span>Keypad</span>
+      </div>
+    </div>
+
+    <!-- Favorites Screen -->
+    <div class="phone-screen active" id="favoritesScreen">
+      <div class="favorites-list">
+        <!-- Favorites will be populated here -->
+      </div>
+      <button class="add-favorite-btn">
+        <i class="fas fa-plus"></i> Add Favorite
+      </button>
+    </div>
+
+    <!-- Recents Screen -->
+    <div class="phone-screen" id="recentsScreen">
+      <div class="recents-list">
+        <!-- Recent calls will be populated here -->
+      </div>
+      <button class="clear-recents-btn">
+        <i class="fas fa-trash"></i> Clear
+      </button>
+    </div>
+
+    <!-- Contacts Screen -->
+    <div class="phone-screen" id="contactsScreen">
+      <div class="contacts-search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search Contacts" id="contactSearchInput"/>
+      </div>
+      <div class="contacts-list">
+        <!-- Contacts will be populated here -->
+      </div>
+      <button class="add-contact-btn">
+        <i class="fas fa-plus"></i> Add Contact
+      </button>
+    </div>
+
+    <!-- Keypad Screen -->
+    <div class="phone-screen" id="keypadScreen">
+      <div class="keypad-display">
+        <input type="tel" id="phoneNumber" readonly/>
+        <i class="fas fa-backspace" id="backspace"></i>
+      </div>
+      <div class="keypad-grid">
+        <!-- Keypad buttons will be generated here -->
+      </div>
+      <button class="call-btn">
+        <i class="fas fa-phone"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Call Screen -->
+  <div id="callScreen" style="display:none;">
+    <div class="call-info">
+      <div class="caller-name">John Doe</div>
+      <div class="call-status">Calling...</div>
+      <div class="call-timer">00:00</div>
+    </div>
+    <div class="caller-avatar">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="call-actions">
+      <button class="mute-btn">
+        <i class="fas fa-microphone-slash"></i>
+      </button>
+      <button class="keypad-btn">
+        <i class="fas fa-th"></i>
+      </button>
+      <button class="speaker-btn">
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <button class="add-call-btn">
+        <i class="fas fa-plus"></i>
+      </button>
+      <button class="end-call-btn">
+        <i class="fas fa-phone-slash"></i>
+      </button>
+    </div>
+  </div>
 
       </div>
 
