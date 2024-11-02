@@ -1,90 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/fontawesome.css" />
-		<link rel="stylesheet" href="css/app.css" />
-		<title>smartphone</title>
-	</head>
-	<body>
-		<div id="smartphone">
-			<div id="head">
-				<div id="clock"></div>
-				<div id="notch"></div>
-				<div id="headInfo">
-					<i class="fas fa-battery-full" id="battery"></i>
-					<i class="fas fa-signal" id="signal"></i>
-				</div>
-			</div>
-			<div id="homeScreen">
-				<div id="apps">
-					<div class="app" id="appCalenderButton"></div>
-					<div class="app" id="appWeatherButton">
-						<i class="fas fa-cloud-sun"></i>
-					</div>
-					<div class="app" id="appChargeButton">
-						<i class="fas fa-charging-station"></i>
-					</div>
-					<div class="app" id="appAirplaneButton">
-						<i class="fas fa-plane"></i>
-					</div>
-				</div>
-				<div id="fav">
-					<div class="app" id="appPhoneButton">
-						<i class="fas fa-phone"></i>
-					</div>
-					<div class="app" id="appContactsButton">
-						<i class="fas fa-address-book"></i>
-					</div>
-					<div class="app" id="appMessagesButton">
-						<i class="fas fa-comment"></i>
-					</div>
-					<div class="app" id="appGpsButton">
-						<i class="fas fa-map-marker-alt"></i>
-					</div>
-				</div>
-			</div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>smartphone</title>
+  </head>
+  <body>
+    <div id="smartphone">
+      <div id="head">
+        <div id="clock"></div>
+        <div id="notch"></div>
+        <div id="headInfo">
+          <i class="fas fa-battery-full" id="battery"></i>
+          <i class="fas fa-signal" id="signal"></i>
+        </div>
+      </div>
+      <div id="homeScreen">
+        <div id="apps">
+          <div class="app" id="appCalenderButton"></div>
+          <div class="app" id="appWeatherButton">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="app" id="appChargeButton">
+            <i class="fas fa-charging-station"></i>
+          </div>
+          <div class="app" id="appAirplaneButton">
+            <i class="fas fa-plane"></i>
+          </div>
+		  <div class="app" id="appSettingsButton">
+			<i class="fas fa-cog"></i>
+		  </div>
+		  <div class="app" id="appGalleryButton">
+			<i class="fas fa-images"></i>
+		  </div>
+		  <div class="app" id="appWidgetsButton">
+			<i class="fas fa-th-large"></i>
+		  </div>
+        </div>
+        <div id="fav">
+          <div class="app" id="appPhoneButton">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="app" id="appContactsButton">
+            <i class="fas fa-address-book"></i>
+          </div>
+          <div class="app" id="appMessagesButton">
+            <i class="fas fa-comment"></i>
+          </div>
+          <div class="app" id="appGpsButton">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+        </div>
+      </div>
 
-			<div id="appScreen">
-				<!-- CONTACTS -->
-				<div id="appContacts">
-					<div id="appContactsOverview">
-						<h5>Contacts</h5>
-						<input
-							type="text"
-							id="appContactsSearch"
-							placeholder="Search"
-						/>
-						<div id="appContactsList"></div>
-					</div>
-					<div id="appContactsEdit">
-						<div id="editContactHead">
-							<i class="fas fa-chevron-left"></i> Contacts
-						</div>
-						<div id="editContactLetter">
-							<span></span>
-						</div>
-						<div id="editContactName"></div>
-						<div id="editContactButtons">
-							<div><i class="fas fa-phone"></i></div>
-							<div><i class="fas fa-comment"></i></div>
-							<div id="editContactDeleteButton">
-								<i class="fas fa-trash"></i>
-							</div>
-						</div>
-						<div id="editContact">
-							<input type="hidden" id="contactId" />
-							<input type="text" id="contactNewName" />
-							<input type="text" id="contactNewPhone" />
-						</div>
-					</div>
-				</div>
-				<!-- CONTACTS END -->
+      <div id="appScreen">
+        <!-- CONTACTS -->
+        <div id="appContacts">
+          <div id="appContactsOverview">
+            <h5>Contacts</h5>
+            <input type="text" id="appContactsSearch" placeholder="Search" />
+            <div id="appContactsList"></div>
+          </div>
+          <div id="appContactsEdit">
+            <div id="editContactHead">
+              <i class="fas fa-chevron-left"></i> Contacts
+            </div>
+            <div id="editContactLetter">
+              <span></span>
+            </div>
+            <div id="editContactName"></div>
+            <div id="editContactButtons">
+              <div><i class="fas fa-phone"></i></div>
+              <div><i class="fas fa-comment"></i></div>
+              <div id="editContactDeleteButton">
+                <i class="fas fa-trash"></i>
+              </div>
+            </div>
+            <div id="editContact">
+              <input type="hidden" id="contactId" />
+              <input type="text" id="contactNewName" />
+              <input type="text" id="contactNewPhone" />
+            </div>
+          </div>
+        </div>
+        <!-- CONTACTS END -->
+		 <!-- Settings App -->
+		<div id="appSettings" style="display:none;">
+			<div class="settings-header">
+			<h5>Settings</h5>
+			<input type="text" placeholder="Search settings" id="settingsSearch"/>
 			</div>
-
-			<div id="homeButton"></div>
+			<div class="settings-list">
+			<div class="settings-item" data-section="about">
+				<i class="fas fa-info-circle"></i>
+				<span>About Phone</span>
+			</div>
+			<div class="settings-item" data-section="network">
+				<i class="fas fa-wifi"></i>
+				<span>Network & Internet</span>
+			</div>
+			<div class="settings-item" data-section="apps">
+				<i class="fas fa-mobile-alt"></i>
+				<span>Apps</span>
+			</div>
+			<div class="settings-item" data-section="notifications">
+				<i class="fas fa-bell"></i>
+				<span>Notifications</span>
+			</div>
+			<div class="settings-item" data-section="battery">
+				<i class="fas fa-battery-full"></i>
+				<span>Battery</span>
+			</div>
+			<div class="settings-item" data-section="wallpaper">
+				<i class="fas fa-image"></i>
+				<span>Wallpaper & Style</span>
+			</div>
+			</div>
 		</div>
-		<script src="js/jquery.js"></script>
-		<script src="js/app.js"></script>
-	</body>
+
+		<!-- Gallery App -->
+		<div id="appGallery" style="display:none;">
+			<div class="gallery-header">
+			<h5>Photos</h5>
+			<div class="gallery-actions">
+				<i class="fas fa-search"></i>
+				<i class="fas fa-ellipsis-v"></i>
+			</div>
+			</div>
+			<div class="gallery-tabs">
+			<span class="active">Photos</span>
+			<span>Albums</span>
+			<span>Sharing</span>
+			</div>
+			<div class="gallery-grid" id="photoGrid"></div>
+		</div>
+
+		<!-- Widgets Panel -->
+		<div id="widgetsPanel" style="display:none;">
+			<div class="widgets-header">
+			<h5>Add Widgets</h5>
+			</div>
+			<div class="widgets-grid">
+			<div class="widget-item" data-widget="clock">
+				<i class="fas fa-clock"></i>
+				<span>Clock</span>
+			</div>
+			<div class="widget-item" data-widget="weather">
+				<i class="fas fa-cloud-sun"></i>
+				<span>Weather</span>
+			</div>
+			<div class="widget-item" data-widget="calendar">
+				<i class="fas fa-calendar"></i>
+				<span>Calendar</span>
+			</div>
+			</div>
+		</div>
+
+		 <!-- Messages App Main Screen -->
+		 <div id="appMessages" style="display:none;">
+			<div class="messages-header">
+			  <h5>Messages</h5>
+			  <div class="message-actions">
+				<i class="fas fa-edit" id="newMessageBtn"></i>
+				<i class="fas fa-search" id="searchMessagesBtn"></i>
+			  </div>
+			</div>
+			<div class="messages-search" style="display:none;">
+			  <input type="text" placeholder="Search messages" id="messageSearchInput"/>
+			</div>
+			<div class="messages-list" id="messagesList">
+			  <!-- Messages list will be populated here -->
+			</div>
+		  </div>
+		
+		  <!-- Individual Chat Screen -->
+		  <div id="chatScreen" style="display:none;">
+			<div class="chat-header">
+			  <div class="chat-header-left">
+				<i class="fas fa-chevron-left" id="backToMessages"></i>
+				<div class="chat-contact">
+				  <div class="chat-contact-name"></div>
+				  <div class="chat-contact-status">online</div>
+				</div>
+			  </div>
+			  <div class="chat-header-right">
+				<i class="fas fa-phone"></i>
+				<i class="fas fa-video"></i>
+				<i class="fas fa-info-circle"></i>
+			  </div>
+			</div>
+			
+			<div class="chat-messages" id="chatMessages">
+			  <!-- Chat messages will be populated here -->
+			</div>
+		
+			<div class="chat-input-area">
+			  <div class="chat-attachments">
+				<i class="fas fa-camera"></i>
+				<i class="fas fa-image"></i>
+				<i class="fas fa-map-marker-alt"></i>
+				<i class="fas fa-microphone"></i>
+			  </div>
+			  <div class="chat-input-wrapper">
+				<input type="text" placeholder="iMessage" id="messageInput"/>
+				<i class="fas fa-paper-plane" id="sendMessage"></i>
+			  </div>
+			</div>
+		  </div>
+		
+		  <!-- New Message Screen -->
+		  <div id="newMessageScreen" style="display:none;">
+			<div class="new-message-header">
+			  <i class="fas fa-chevron-left" id="backFromNew"></i>
+			  <h5>New Message</h5>
+			</div>
+			<div class="new-message-to">
+			  <span>To:</span>
+			  <input type="text" id="newMessageRecipient" placeholder="Enter name or number"/>
+			</div>
+			<div class="suggested-contacts" id="suggestedContacts">
+			  <!-- Suggested contacts will appear here -->
+			</div>
+		  </div>
+		
+		  <!-- Attachment Preview -->
+		  <div id="attachmentPreview" style="display:none;">
+			<div class="attachment-header">
+			  <i class="fas fa-times" id="closeAttachment"></i>
+			  <div class="attachment-actions">
+				<i class="fas fa-crop"></i>
+				<i class="fas fa-adjust"></i>
+				<i class="fas fa-magic"></i>
+			  </div>
+			</div>
+			<div class="attachment-content">
+			  <!-- Preview content goes here -->
+			</div>
+			<div class="attachment-footer">
+			  <button id="cancelAttachment">Cancel</button>
+			  <button id="sendAttachment">Send</button>
+			</div>
+		  </div>
+
+      </div>
+
+      <div id="homeButton"></div>
+    </div>
+    <script>
+      
+	</script>
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

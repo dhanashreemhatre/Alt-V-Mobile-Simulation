@@ -44,10 +44,10 @@ h5 {
 	height: 30vw;
 	border: 0.2vw solid var(--border);
 	right: 2vw;
-	bottom: -29vw;
+	/* bottom: -29vw; */
 	border-radius: 0.75vw;
 	box-shadow: 0 0 1vw var(--border);
-	opacity: 0.5;
+	/* opacity: 0.5; */
 }
 #head {
 	display: flex;
@@ -251,3 +251,368 @@ input[type='text'] {
 	margin-top: 1vw;
 	text-align: center;
 }
+/* Settings Styles */
+#appSettings {
+    height: 100%;
+    background: var(--background);
+  }
+  
+  .settings-header {
+    padding: 0.5vw;
+  }
+  
+  .settings-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75vw;
+    border-bottom: 0.05vw solid var(--fav);
+    cursor: pointer;
+  }
+  
+  .settings-item i {
+    margin-right: 0.75vw;
+    width: 1.5vw;
+    text-align: center;
+  }
+  
+  .settings-item:hover {
+    background: var(--fav);
+  }
+  
+  /* Gallery Styles */
+  #appGallery {
+    height: 100%;
+    background: var(--background);
+  }
+  
+  .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vw;
+  }
+  
+  .gallery-actions i {
+    margin-left: 0.5vw;
+    cursor: pointer;
+  }
+  
+  .gallery-tabs {
+    display: flex;
+    border-bottom: 0.05vw solid var(--fav);
+    padding: 0.5vw;
+  }
+  
+  .gallery-tabs span {
+    margin-right: 1vw;
+    cursor: pointer;
+    padding: 0.25vw 0;
+  }
+  
+  .gallery-tabs span.active {
+    border-bottom: 0.1vw solid var(--font);
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25vw;
+    padding: 0.5vw;
+  }
+  
+  /* Widgets Styles */
+  #widgetsPanel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    height: 70%;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    padding: 1vw;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  #widgetsPanel.show {
+    transform: translateY(0);
+  }
+  
+  .widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    padding: 1vw;
+  }
+  
+  .widget-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    background: var(--fav);
+    border-radius: 0.5vw;
+    cursor: pointer;
+  }
+  
+  /* Home Screen Widget Styles */
+  .home-widget {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    min-width: 3vw;
+    min-height: 3vw;
+  }
+
+  #appMessages {
+    height: 100%;
+    background: var(--background);
+  }
+
+  .messages-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75vw;
+    border-bottom: 0.05vw solid var(--fav);
+  }
+
+  .message-actions i {
+    margin-left: 1vw;
+    cursor: pointer;
+  }
+
+  .messages-search {
+    padding: 0.5vw;
+    border-bottom: 0.05vw solid var(--fav);
+  }
+
+  .message-preview {
+    display: flex;
+    padding: 0.75vw;
+    border-bottom: 0.05vw solid var(--fav);
+    cursor: pointer;
+  }
+
+  .message-preview:hover {
+    background: var(--fav);
+  }
+
+  .message-contact-photo {
+    width: 3vw;
+    height: 3vw;
+    background: var(--fav-dark);
+    border-radius: 50%;
+    margin-right: 0.75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+  }
+
+  .message-info {
+    flex: 1;
+  }
+
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25vw;
+  }
+
+  .message-time {
+    font-size: 0.7vw;
+    opacity: 0.7;
+  }
+
+  .message-preview-text {
+    font-size: 0.8vw;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Chat Screen Styles */
+  #chatScreen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+  }
+
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75vw;
+    border-bottom: 0.05vw solid var(--fav);
+  }
+
+  .chat-header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .chat-header-left i {
+    margin-right: 1vw;
+    cursor: pointer;
+  }
+
+  .chat-contact-status {
+    font-size: 0.7vw;
+    opacity: 0.7;
+  }
+
+  .chat-header-right i {
+    margin-left: 1vw;
+    cursor: pointer;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message-bubble {
+    max-width: 70%;
+    padding: 0.75vw;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    position: relative;
+  }
+
+  .message-sent {
+    background: #0B93F6;
+    align-self: flex-end;
+    border-bottom-right-radius: 0.2vw;
+  }
+
+  .message-received {
+    background: var(--fav);
+    align-self: flex-start;
+    border-bottom-left-radius: 0.2vw;
+  }
+
+  .message-time {
+    font-size: 0.6vw;
+    opacity: 0.7;
+    margin-top: 0.25vw;
+  }
+
+  .chat-input-area {
+    padding: 0.75vw;
+    border-top: 0.05vw solid var(--fav);
+  }
+
+  .chat-attachments {
+    display: flex;
+    margin-bottom: 0.5vw;
+  }
+
+  .chat-attachments i {
+    margin-right: 1vw;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .chat-attachments i:hover {
+    opacity: 1;
+  }
+
+  .chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--fav);
+    border-radius: 1.5vw;
+    padding: 0.5vw 1vw;
+  }
+
+  .chat-input-wrapper input {
+    flex: 1;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chat-input-wrapper i {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .chat-input-wrapper i:hover {
+    opacity: 1;
+  }
+
+  /* Attachment Preview Styles */
+  #attachmentPreview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background);
+    z-index: 1000;
+  }
+
+  .attachment-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75vw;
+    border-bottom: 0.05vw solid var(--fav);
+  }
+
+  .attachment-actions i {
+    margin-left: 1vw;
+    cursor: pointer;
+  }
+
+  .attachment-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+  }
+
+  .attachment-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75vw;
+    border-top: 0.05vw solid var(--fav);
+  }
+
+  .attachment-footer button {
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
+
+  #sendAttachment {
+    background: #0B93F6;
+    color: white;
+  }
+
+  /* Location Sharing Styles */
+  .location-preview {
+    width: 100%;
+    height: 15vw;
+    background: var(--fav-dark);
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .location-preview i {
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+  }
