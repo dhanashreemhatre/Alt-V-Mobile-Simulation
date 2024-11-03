@@ -3,6 +3,8 @@ import('./apps/phone.js');
 import('./apps/contact.js');
 import('./apps/message.js');
 import('./apps/settings.js');
+import('./apps/gallery.js');
+import('./apps/location.js')
 import('./functions.js');
 $(() => {
 

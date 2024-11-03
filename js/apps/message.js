@@ -319,6 +319,172 @@ let currentChat = null;
   initializeEventHandlers();
   loadMessagesList();
 
+  // Improved chat initialization and scroll handling
+function initializeChatFunctionality() {
+  let isTyping = false;
+  let typingTimeout;
+  
+  // Initial scroll to bottom
+  scrollToBottom();
+  
+  // Message input handling
+  $('#messageInput').on('keypress', function(e) {
+    if (e.which === 13 && !e.shiftKey) {
+      e.preventDefault();
+      const message = $(this).val().trim();
+      if (message) {
+        sendMessage(message);
+        $(this).val('');
+      }
+    }
+  });
+
+  // Send button handling
+  $('#sendMessage').on('click', function() {
+    const message = $('#messageInput').val().trim();
+    if (message) {
+      sendMessage(message);
+      $('#messageInput').val('');
+    }
+  });
+
+  function sendMessage(content) {
+    if (!currentChat || !content) return;
+
+    const newMessage = {
+      type: 'text',
+      content: content,
+      sent: true,
+      time: getCurrentTime(),
+      id: generateMessageId(),
+      delivered: false
+    };
+
+    if (!messages[currentChat]) {
+      messages[currentChat] = [];
+    }
+
+    messages[currentChat].push(newMessage);
+    
+    // Append message immediately
+    appendMessage(newMessage);
+    scrollToBottom();
+
+    // Simulate message delivery
+    setTimeout(() => {
+      newMessage.delivered = true;
+      updateMessageStatus(newMessage.id, 'delivered');
+      
+      // Simulate reply
+      if (Math.random() > 0.5) {
+        simulateReply();
+      }
+    }, 1000);
+  }
+
+  function appendMessage(message) {
+    const messageHtml = `
+      <div class="message-bubble ${message.sent ? 'message-sent' : 'message-received'}" 
+           data-message-id="${message.id}">
+        <div class="message-content">${escapeHtml(message.content)}</div>
+        <div class="message-time">${message.time}</div>
+        ${message.sent ? `
+          <div class="message-status">
+            ${message.delivered ? '✓✓' : '✓'}
+          </div>
+        ` : ''}
+      </div>
+    `;
+    
+    $('#chatMessages').append(messageHtml);
+    scrollToBottom();
+  }
+
+  function simulateReply() {
+    showTypingIndicator();
+    
+    setTimeout(() => {
+      hideTypingIndicator();
+      
+      const replies = [
+        "Got it, thanks!",
+        "I'll check and get back to you.",
+        "Sounds good!",
+        "Perfect, thanks for letting me know.",
+        "I understand, will do!"
+      ];
+      
+      const replyMessage = {
+        type: 'text',
+        content: replies[Math.floor(Math.random() * replies.length)],
+        sent: false,
+        time: getCurrentTime(),
+        id: generateMessageId()
+      };
+      
+      if (!messages[currentChat]) {
+        messages[currentChat] = [];
+      }
+      
+      messages[currentChat].push(replyMessage);
+      appendMessage(replyMessage);
+    }, 1500 + Math.random() * 1000);
+  }
+
+  function showTypingIndicator() {
+    if (!$('#typingIndicator').length) {
+      const typingHtml = `
+        <div class="message-loading" id="typingIndicator">
+          <div class="loading-dots">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+          </div>
+        </div>
+      `;
+      
+      $('#chatMessages').append(typingHtml);
+      scrollToBottom();
+    }
+  }
+
+  function hideTypingIndicator() {
+    $('#typingIndicator').remove();
+  }
+
+  function updateMessageStatus(messageId, status) {
+    const messageElement = $(`.message-bubble[data-message-id="${messageId}"]`);
+    const statusElement = messageElement.find('.message-status');
+    
+    if (status === 'delivered') {
+      statusElement.html('✓✓');
+    }
+  }
+
+  function scrollToBottom() {
+    const chatMessages = $('#chatMessages');
+    chatMessages.scrollTop(chatMessages[0].scrollHeight);
+  }
+
+  // Handle window resize
+  $(window).on('resize', function() {
+    scrollToBottom();
+  });
+
+  // Attachment handling
+  $('.chat-attachments i').on('click', function() {
+    const type = $(this).hasClass('fa-camera') ? 'camera' :
+                $(this).hasClass('fa-image') ? 'gallery' :
+                $(this).hasClass('fa-map-marker-alt') ? 'location' : 'audio';
+    showAttachmentInterface(type);
+  });
+}
+
+// Initialize when document is ready
+$(document).ready(function() {
+  initializeChatFunctionality();
+});
+
 
 
   

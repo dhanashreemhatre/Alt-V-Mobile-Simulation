@@ -39,9 +39,7 @@
           <div class="app" id="appGalleryButton">
           <i class="fas fa-images"></i>
           </div>
-          <div class="app" id="appWidgetsButton">
-          <i class="fas fa-th-large"></i>
-          </div>
+         
         </div>
         <div id="fav">
           <div class="app" id="appPhoneButton">
@@ -60,7 +58,11 @@
       </div>
 
       <div id="appScreen">
+        <div id="appContacts">
+
+        </div>
         <!-- CONTACTS -->
+        
         <div id="appContacts">
           <div id="appContactsOverview">
             <h5>Contacts</h5>
@@ -183,26 +185,6 @@
 			<div class="gallery-grid" id="photoGrid"></div>
 		</div>
 
-		<!-- Widgets Panel -->
-		<div id="widgetsPanel" style="display:none;">
-			<div class="widgets-header">
-			<h5>Add Widgets</h5>
-			</div>
-			<div class="widgets-grid">
-			<div class="widget-item" data-widget="clock">
-				<i class="fas fa-clock"></i>
-				<span>Clock</span>
-			</div>
-			<div class="widget-item" data-widget="weather">
-				<i class="fas fa-cloud-sun"></i>
-				<span>Weather</span>
-			</div>
-			<div class="widget-item" data-widget="calendar">
-				<i class="fas fa-calendar"></i>
-				<span>Calendar</span>
-			</div>
-			</div>
-		</div>
 
 		 <!-- Messages App Main Screen -->
 		 <div id="appMessages" style="display:none;">
@@ -237,11 +219,12 @@
 				<i class="fas fa-info-circle"></i>
 			  </div>
 			</div>
+
 			
 			<div class="chat-messages" id="chatMessages">
 			  <!-- Chat messages will be populated here -->
 			</div>
-		
+      <div class="chat-input-container">
 			<div class="chat-input-area">
 			  <div class="chat-attachments">
 				<i class="fas fa-camera"></i>
@@ -254,6 +237,7 @@
 				<i class="fas fa-paper-plane" id="sendMessage"></i>
 			  </div>
 			</div>
+      </div>
 		  </div>
 		
 		  <!-- New Message Screen -->
