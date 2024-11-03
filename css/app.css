@@ -88,6 +88,7 @@ h5 {
 #notch {
 	background-color: #000;
 	min-height: 100%;
+	z-index: 1000;
 	border-bottom-left-radius: 0.8vw;
 	border-bottom-right-radius: 0.8vw;
 	width: 50%;

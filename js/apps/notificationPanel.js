@@ -50,3 +50,4 @@
     audioCharge.volume = value;
     audioClick.volume = value;
   });
+window.showNotificationPanel = showNotificationPanel;
