@@ -31,7 +31,7 @@ let contacts = [
 ];
 
 if (!webView) {
-	webView = new alt.WebView('http://resource/client/html/smartphone.html');
+	webView = new alt.WebView('http://resource/client/html/index.html');
 
 	webView.on('smartphone:contacts:update', (newData) => {
 		updateContact(newData);
