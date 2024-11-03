@@ -6,6 +6,7 @@
 @import url('./app/gallery.css');
 @import url('./app/weather.css');
 @import url('./app/widgetpanel.css');
+@import url('./app/notificationPanel.css');
 
 @font-face {
 	font-family: 'Varela Round';
@@ -246,3 +247,4 @@ input[type='text']::placeholder{
 #appGalleryButton{
   background-color: rgb(212, 107, 59);
 }
+

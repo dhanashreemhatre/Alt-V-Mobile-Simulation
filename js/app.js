@@ -6,6 +6,7 @@ import('./apps/settings.js');
 import('./apps/gallery.js');
 import('./apps/location.js')
 import('./functions.js');
+import('./apps/notificationPanel.js');
 $(() => {
 
 
