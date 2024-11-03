@@ -26,7 +26,9 @@
 :root {
 	--border: rgb(0, 0, 0);
 	--font: #fff;
-	--background: rgb(37, 105, 150);
+	--background: rgba(0, 0, 0, 0.774);
+	--button: rgb(0, 0, 0);
+	--wallpaper: linear-gradient(45deg, #ff6b6b, #556270);
 	--fav: rgb(25, 70, 100);
 	--fav-dark: rgb(17, 47, 66);
 	--red: rgb(207, 102, 102);
@@ -38,6 +40,7 @@
 	--hover: #1f1f1f;
 	--primary: #0d6efd;
 	--secondary: #495057;
+	--button: rgb(57, 57, 57);
 }
 * {
 	margin: 0;
@@ -58,14 +61,14 @@ h5 {
 }
 #smartphone {
 	color: var(--font);
-	background-color: var(--background);
+	background: var(--wallpaper);
 	position: absolute;
 	width: 20vw;
 	height: 80vh;
 	border: 0.5vw solid var(--border);
 	right: 2vw;
 	/* bottom: -29vw; */
-	border-radius: 0.75vw;
+	border-radius: 2vw;
 	box-shadow: 0 0 1vw var(--border);
 	/* opacity: 0.5; */
 }
@@ -75,6 +78,7 @@ h5 {
 	justify-content: center;
 	height: 1vw;
 	font-size: 0.7vw;
+	border-radius: 0.8vw 0.8vw 0 0;
 }
 #head > div {
 	text-align: center;
@@ -83,35 +87,49 @@ h5 {
 #notch {
 	background-color: #000;
 	min-height: 100%;
-	border-bottom-left-radius: 0.5vw;
-	border-bottom-right-radius: 0.5vw;
+	border-bottom-left-radius: 0.8vw;
+	border-bottom-right-radius: 0.8vw;
 	width: 50%;
+}
+#clock{
+	border-radius: 1vw 0 0 0;
 }
 #clock,
 #headInfo {
 	width: 25%;
+	
 }
 #headInfo {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
+	border-radius: 0 1vw 0 0;
+	
 }
 #headInfo i {
 	padding: 0.5vw;
+	
 }
 #homeScreen {
 	min-height: calc(100% - 1vw);
 	position: relative;
+	border-radius: 0 0  0.8vw 0.8vw;
 }
 #appScreen {
-	min-height: calc(100% - 5vw);
-	max-height: calc(100% - 5vw);
+	min-height: calc(100% - 1vw );
+	max-height: calc(100% - 1vw);
 	overflow: auto;
-	padding: 0.5vw;
+	padding: 0 0.5vw;
 	position: relative;
+	background: var(--background);
+	border-radius:  0 0 0.8vw 0.8vw;
+	
 }
 #appScreen::-webkit-scrollbar {
 	display: none;
+}
+input{
+	color: var(--font);
 }
 input[type='text'] {
 	width: calc(100% - 0.5vw);
@@ -122,9 +140,11 @@ input[type='text'] {
 	color: var(--font);
 	border-radius: 0.25vw;
 	font-size: 0.75vw;
+	color: var(--font);
 }
 input[type='text']::placeholder{
   padding: 0 2%;
+  color: var(--font);
 
 }
 #homeButton {
@@ -134,9 +154,9 @@ input[type='text']::placeholder{
 	height: 2vw;
 	left: calc(100% / 2 - 1vw);
 	bottom: 0;
-	border: 0.1vw solid #000;
+	border: 0.1vw solid var(--border);
 	border-radius: 100%;
-	background-color: #000;
+	background-color: var(--button);
 	opacity: 0.25;
 	margin: 0.5vw 0;
 }
@@ -197,6 +217,9 @@ input[type='text']::placeholder{
 }
 #appPhoneButton {
 	background-color: rgb(22, 109, 19);
+}
+#appPhoneButton i{
+	rotate: 90deg;
 }
 #appContactsButton {
 	background-color: rgb(21, 141, 115);

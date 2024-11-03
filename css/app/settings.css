@@ -1,7 +1,8 @@
 #appSettings {
-  background: var(--background);
+  /* background: var(--background); */
   height: 100vh;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .settings-header {
@@ -9,12 +10,11 @@
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: var(--background);
+  /* background: var(--background); */
   z-index: 100;
 }
 
 .settings-header h5 {
-  font-size: 24px;
   margin-bottom: 15px;
 }
 
@@ -159,4 +159,41 @@ input:checked + .slider:before {
 .setting-description {
   font-size: 14px;
   color: var(--secondary);
+}
+
+
+
+.settings-back-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.settings-back-btn:hover {
+  background: var(--hover);
+  border-radius: 50%;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+}
+
+#appSettings {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.settings-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--background);
+  min-height: 100%;
+  padding-top: 70px; /* Adjust based on your header height */
 }

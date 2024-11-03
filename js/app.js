@@ -2,6 +2,8 @@ import('./apps/calendar.js');
 import('./apps/phone.js');
 import('./apps/contact.js');
 import('./apps/message.js');
+import('./apps/settings.js');
+import('./functions.js');
 $(() => {
 
 
@@ -23,6 +25,20 @@ $(() => {
 		'appCalenderButton'
 	];
 	// #endregion
+
+	const themeToggle = document.getElementById('themeToggle');
+	const body = document.body;
+
+	themeToggle.addEventListener('change', () => {
+		if (themeToggle.checked) {
+			body.setAttribute('data-theme', 'dark');
+		} else {
+			body.setAttribute('data-theme', 'light');
+		}
+	});
+
+	
+	
 	
   // clock functionality
   function updateTime() {
@@ -133,6 +149,7 @@ $(() => {
 	$('#homeButton').click(() => {
 		audioClick.play();
 		toggleHomeScreen();
+		updateHeaderColors(getSmartphoneBackgroundColor());
 	});
 
 	$('.app').click(function() {
@@ -142,9 +159,28 @@ $(() => {
 	});
 	// #endregion
 
+	function getSmartphoneBackgroundColor() {
+		const smartphone = document.getElementById('smartphone');
+		return smartphone ? window.getComputedStyle(smartphone).backgroundColor : null;
+	}
 	
- 
-
+	function updateHeaderColors(forcedColor = null) {
+		const head = document.getElementById('head');
+		const appScreen = document.getElementById('appScreen');
+		const smartphone = document.getElementById('smartphone');
+		
+		// Use forced color (smartphone background) or get app screen background
+		const backgroundColor = forcedColor || 
+			(appScreen && appScreen.style.display !== 'none' ? 
+				getBackgroundColor(appScreen) : 
+				getBackgroundColor(smartphone));
+		
+		[head].forEach(element => {
+			if (element) {
+				element.style.backgroundColor = backgroundColor;
+			}
+		});
+	
+		updateIconColors(backgroundColor);
+	}
 });
-
-

@@ -45,7 +45,7 @@
         </div>
         <div id="fav">
           <div class="app" id="appPhoneButton">
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-phone" style="rotate: 90deg;"></i>
           </div>
           <div class="app" id="appContactsButton">
             <i class="fas fa-address-book"></i>
@@ -76,7 +76,7 @@
             </div>
             <div id="editContactName"></div>
             <div id="editContactButtons">
-              <div><i class="fas fa-phone"></i></div>
+              <div><i class="fas fa-phone" style="rotate: 90deg;"></i></div>
               <div><i class="fas fa-comment"></i></div>
               <div id="editContactDeleteButton">
                 <i class="fas fa-trash"></i>
@@ -91,38 +91,80 @@
         </div>
         <!-- CONTACTS END -->
 		 <!-- Settings App -->
-		<div id="appSettings" style="display:none;">
-			<div class="settings-header">
-			<h5>Settings</h5>
-			<input type="text" placeholder="Search settings" id="settingsSearch"/>
-			</div>
-			<div class="settings-list">
-			<div class="settings-item" data-section="about">
-				<i class="fas fa-info-circle"></i>
-				<span>About Phone</span>
-			</div>
-			<div class="settings-item" data-section="network">
-				<i class="fas fa-wifi"></i>
-				<span>Network & Internet</span>
-			</div>
-			<div class="settings-item" data-section="apps">
-				<i class="fas fa-mobile-alt"></i>
-				<span>Apps</span>
-			</div>
-			<div class="settings-item" data-section="notifications">
-				<i class="fas fa-bell"></i>
-				<span>Notifications</span>
-			</div>
-			<div class="settings-item" data-section="battery">
-				<i class="fas fa-battery-full"></i>
-				<span>Battery</span>
-			</div>
-			<div class="settings-item" data-section="wallpaper">
-				<i class="fas fa-image"></i>
-				<span>Wallpaper & Style</span>
-			</div>
-			</div>
-		</div>
+     <div id="appSettings">
+      <div class="settings-header">
+          <h5>Settings</h5>
+          <input type="text" placeholder="Search settings" id="settingsSearch"/>
+      </div>
+
+      <div class="settings-list">
+          <div class="settings-item" data-section="display">
+              <i class="fas fa-desktop"></i>
+              <span>Display & Theme</span>
+          </div>
+          <div class="settings-item" data-section="wallpaper">
+              <i class="fas fa-image"></i>
+              <span>Wallpaper & Style</span>
+          </div>
+          <div class="settings-item" data-section="network">
+              <i class="fas fa-wifi"></i>
+              <span>Network & Internet</span>
+          </div>
+          <div class="settings-item" data-section="battery">
+              <i class="fas fa-battery-full"></i>
+              <span>Battery</span>
+          </div>
+          <div class="settings-item" data-section="sound">
+              <i class="fas fa-volume-up"></i>
+              <span>Sound & Vibration</span>
+          </div>
+          <div class="settings-item" data-section="privacy">
+              <i class="fas fa-shield-alt"></i>
+              <span>Privacy & Security</span>
+          </div>
+          <div class="settings-item" data-section="about">
+              <i class="fas fa-info-circle"></i>
+              <span>About Phone</span>
+          </div>
+      </div>
+
+      <!-- Display & Theme Section -->
+      <div id="display" class="settings-content">
+          <div class="setting-option">
+              <div class="setting-option-header">
+                  <span>Dark Mode</span>
+                  <label class="switch">
+                      <input type="checkbox" id="themeToggle">
+                      <span class="slider"></span>
+                  </label>
+              </div>
+              <div class="setting-description">
+                  Enable dark mode to reduce eye strain in low light conditions
+              </div>
+          </div>
+          <div class="setting-option">
+              <div class="setting-option-header">
+                  <span>Font Size</span>
+                  <select id="fontSize">
+                      <option value="small">Small</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="large">Large</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+
+      <!-- Wallpaper Section -->
+      <div id="wallpaper" class="settings-content">
+          <div class="wallpaper-grid">
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #ff6b6b, #556270)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #4ecdc4, #556270)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #fc354c, #0abfbc)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #4776e6, #8e54e9)"></div>
+          </div>
+      </div>
+      </div>
+<!-- settings app end -->
 
 		<!-- Gallery App -->
 		<div id="appGallery" style="display:none;">
@@ -190,7 +232,7 @@
 				</div>
 			  </div>
 			  <div class="chat-header-right">
-				<i class="fas fa-phone"></i>
+				<i class="fas fa-phone" style="rotate: 90deg;"></i>
 				<i class="fas fa-video"></i>
 				<i class="fas fa-info-circle"></i>
 			  </div>
@@ -312,7 +354,7 @@
         <!-- Keypad buttons will be generated here -->
       </div>
       <button class="call-btn">
-        <i class="fas fa-phone"></i>
+        <i class="fas fa-phone" style="rotate: 90deg;"></i>
       </button>
     </div>
   </div>
