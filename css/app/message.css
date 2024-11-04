@@ -71,7 +71,7 @@
 
 /* Chat Screen Styles */
 #chatScreen {
-  height: 100%;
+  height: 78vh;
   display: flex;
   flex-direction: column;
   background: var(--background);
@@ -170,7 +170,6 @@
 .chat-input-wrapper {
   display: flex;
   align-items: center;
-  background: var(--fav);
   border-radius: 1.5vw;
   padding: 0.5vw 1vw;
 }
@@ -261,7 +260,7 @@
 
 /* Chat Screen Layout Fixes */
 #chatScreen {
-  height: 100%;
+  height: 78vh;
   display: flex;
   flex-direction: column;
   background: var(--background);
@@ -339,7 +338,6 @@
 .chat-input-wrapper {
   display: flex;
   align-items: center;
-  background: var(--fav);
   border-radius: 1.5vw;
   padding: 0.5vw 1vw;
   margin-top: 0.5vw;
@@ -347,7 +345,7 @@
 
 .chat-input-wrapper input {
   flex: 1;
-  background: none;
+  background: none !important;
   border: none;
   margin: 0;
   padding: 0.5vw;
