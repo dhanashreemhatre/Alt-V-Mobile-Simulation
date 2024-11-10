@@ -7,7 +7,7 @@
 
 .settings-header {
   padding: 20px;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   position: sticky;
   top: 0;
   /* background: var(--background); */
@@ -19,16 +19,40 @@
 }
 
 #settingsSearch {
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 8px;
-  background: var(--background);
+  background: var(--input-background);
   color: var(--text);
+}
+.settings-self-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: 10px;
+  padding: 4px 8px;
+  border-radius: 0.4rem;
+}
+.settings-self-info img{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+}
+.settings-self-info .info{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .settings-list {
-  padding: 10px 0;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: 10px;
+  border-radius: 0.4rem;
 }
 
 .settings-item {
@@ -179,7 +203,8 @@ input:checked + .slider:before {
 
 .settings-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
 }
 
 #appSettings {

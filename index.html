@@ -227,7 +227,17 @@
      <div id="appSettings">
       <div class="settings-header">
           <h5>Settings</h5>
-          <input type="text" placeholder="Search settings" id="settingsSearch"/>
+          <input type="text" placeholder="Search" id="settingsSearch"/>
+      </div>
+      <div class="settings-self-info">
+        <img src="./applogo/images.jpeg" alt="">
+        <div class="info">
+          <h5>Dhanashree</h5>
+          <span>Apple Account, iCloud, and more</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
       </div>
 
       <div class="settings-list">
@@ -403,6 +413,65 @@
 		  </div>
 		   <!-- Phone App Main Screen -->
   <div id="phoneApp" style="display:none;">
+
+    <!-- Favorites Screen -->
+    <div class="phone-screen active" id="favoritesScreen">
+      <div class="favorites-list-header">
+        <div class="menu">
+          <i class="fas fa-plus"></i>
+          <span>Edit</span>
+        </div>
+        <div class="label">
+          <h5>Favorites</h5>
+        </div>
+
+      </div>
+      <div class="favorites-list">
+        <!-- Favorites will be populated here -->
+      </div>
+    
+    </div>
+
+    <!-- Recents Screen -->
+    <div class="phone-screen" id="recentsScreen">
+      <div class="recents-list-header">
+        <span>Clear</span>
+        <div class="sort">
+          <span class="sort-option active" data-sort="all">All</span>
+          <span class="sort-option" data-sort="missed">Missed</span>
+        </div>
+        <span>Done</span>
+      </div>
+      <div class="recents-list">
+        <!-- Recent calls will be populated here -->
+      </div>
+     
+    </div>
+
+    <!-- Contacts Screen -->
+    <div class="phone-screen" id="contactsScreen">
+      <div class="contacts-search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search Contacts" id="contactSearchInput"/>
+      </div>
+      <div class="contacts-list">
+        <!-- Contacts will be populated here -->
+      </div>
+    </div>
+
+    <!-- Keypad Screen -->
+    <div class="phone-screen" id="keypadScreen">
+      <div class="keypad-display">
+        <input type="tel" id="phoneNumber" readonly/>
+        <i class="fas fa-backspace" id="backspace" style="font-size: large;"></i>
+      </div>
+      <div class="keypad-grid">
+        <!-- Keypad buttons will be generated here -->
+      </div>
+      <button class="call-btn">
+        <i class="fas fa-phone" style="rotate: 90deg;"></i>
+      </button>
+    </div>
     <div class="phone-tabs">
       <div class="tab active" data-tab="favorites">
         <i class="fas fa-star"></i>
@@ -420,54 +489,6 @@
         <i class="fas fa-th"></i>
         <span>Keypad</span>
       </div>
-    </div>
-
-    <!-- Favorites Screen -->
-    <div class="phone-screen active" id="favoritesScreen">
-      <div class="favorites-list">
-        <!-- Favorites will be populated here -->
-      </div>
-      <button class="add-favorite-btn">
-        <i class="fas fa-plus"></i> Add Favorite
-      </button>
-    </div>
-
-    <!-- Recents Screen -->
-    <div class="phone-screen" id="recentsScreen">
-      <div class="recents-list">
-        <!-- Recent calls will be populated here -->
-      </div>
-      <button class="clear-recents-btn">
-        <i class="fas fa-trash"></i> Clear
-      </button>
-    </div>
-
-    <!-- Contacts Screen -->
-    <div class="phone-screen" id="contactsScreen">
-      <div class="contacts-search">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search Contacts" id="contactSearchInput"/>
-      </div>
-      <div class="contacts-list">
-        <!-- Contacts will be populated here -->
-      </div>
-      <button class="add-contact-btn">
-        <i class="fas fa-plus"></i> Add Contact
-      </button>
-    </div>
-
-    <!-- Keypad Screen -->
-    <div class="phone-screen" id="keypadScreen">
-      <div class="keypad-display">
-        <input type="tel" id="phoneNumber" readonly/>
-        <i class="fas fa-backspace" id="backspace"></i>
-      </div>
-      <div class="keypad-grid">
-        <!-- Keypad buttons will be generated here -->
-      </div>
-      <button class="call-btn">
-        <i class="fas fa-phone" style="rotate: 90deg;"></i>
-      </button>
     </div>
   </div>
 

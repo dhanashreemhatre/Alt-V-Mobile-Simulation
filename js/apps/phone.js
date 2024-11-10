@@ -31,6 +31,80 @@
     }
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const sortOptions = document.querySelectorAll('.sort-option');
+    
+    sortOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        // Remove active class from all options
+        sortOptions.forEach(opt => opt.classList.remove('active'));
+        
+        // Add active class to clicked option
+        this.classList.add('active');
+        
+        // Get the sort type (all/missed)
+        const sortType = this.dataset.sort;
+        
+        // Here you can add your logic to filter the list based on sortType
+        handleSort(sortType);
+      });
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+  const sortOptions = document.querySelectorAll('.sort-option');
+  
+  sortOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      // Remove active class from all options
+      sortOptions.forEach(opt => opt.classList.remove('active'));
+      
+      // Add active class to clicked option
+      this.classList.add('active');
+      
+      // Get the sort type (all/missed)
+      const sortType = this.dataset.sort;
+      
+      // Here you can add your logic to filter the list based on sortType
+      handleSort(sortType);
+    });
+  });
+});
+
+// Function to handle the actual sorting/filtering
+function handleSort(sortType) {
+  // Example implementation
+  console.log(`Sorting by: ${sortType}`);
+  
+  // Add your filtering logic here
+  // For example:
+  if (sortType === 'all') {
+    // Show all items
+    showAllItems();
+  } else if (sortType === 'missed') {
+    // Show only missed items
+    showMissedItems();
+  }
+}
+
+// Example helper functions for filtering
+function showAllItems() {
+  // Implementation to show all items
+  const allItems = document.querySelectorAll('.call-item'); // Adjust selector as needed
+  allItems.forEach(item => item.style.display = 'block');
+}
+
+function showMissedItems() {
+  // Implementation to show only missed items
+  const allItems = document.querySelectorAll('.call-item'); // Adjust selector as needed
+  allItems.forEach(item => {
+    if (item.classList.contains('missed')) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
   // Home button handler
   $('#homeButton').on('click', function() {
     // Hide phone app and show home screen
@@ -104,6 +178,7 @@
       const favorites = contacts.filter(contact => contact.favorite);
       const favoritesHtml = favorites.map(contact => `
         <div class="favorite-contact" data-id="${contact.id}">
+          <div class="info">
           <div class="favorite-avatar">
             <i class="fas fa-user"></i>
           </div>
@@ -111,8 +186,9 @@
             <div class="favorite-name">${contact.name}</div>
             <div class="favorite-number">${contact.number}</div>
           </div>
+          </div>
           <div class="favorite-actions">
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-info-circle"></i>
           </div>
         </div>
       `).join('');
