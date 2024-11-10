@@ -1,0 +1,232 @@
+@import url('./app/calender.css');
+@import url('./app/phone.css');
+@import url('./app/message.css');
+@import url('./app/settings.css');
+@import url('./app/contact.css');
+@import url('./app/gallery.css');
+@import url('./app/weather.css');
+@import url('./app/widgetpanel.css');
+@import url('./app/notificationPanel.css');
+
+@font-face {
+	font-family: 'Varela Round';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/varela-round-v12-latin-regular.eot');
+	src: local('Varela Round Regular'), local('VarelaRound-Regular'),
+		url('../font/varela-round-v12-latin-regular.eot?#iefix')
+			format('embedded-opentype'),
+		url('../font/varela-round-v12-latin-regular.woff2') format('woff2'),
+		url('../font/varela-round-v12-latin-regular.woff') format('woff'),
+		url('../font/varela-round-v12-latin-regular.ttf') format('truetype'),
+		url('../font/varela-round-v12-latin-regular.svg#VarelaRound')
+			format('svg');
+}
+
+
+:root {
+	--border: rgb(0, 0, 0);
+	--font: #343434;
+	--background: rgb(244, 244, 244);
+	--button: rgb(0, 0, 0);
+	--button-text: rgb(255, 255, 255);
+	--input-background: #e8e8e8;
+	--wallpaper: linear-gradient(45deg, #ff6b6b, #556270);
+	--primary: #0d6efd;
+	--secondary: #495057;
+	--fav: rgb(109, 153, 253);
+	--fav-dark: rgb(55, 92, 177);
+	--red: rgb(207, 102, 102);
+}
+[data-theme="dark"] {
+	--background: #121212;
+	--font: #ffffff;
+	--border: #333333;
+	--button-text: #efefef;
+	--hover: #1f1f1f;
+	--primary: #0d6efd;
+	--secondary: #495057;
+	--button: rgb(57, 57, 57);
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Varela Round', Helvetica, sans-serif;
+}
+*:focus {
+	outline: none;
+}
+body {
+	font-size: 1vw;
+	overflow: hidden;
+}
+h5 {
+	text-align: center;
+	font-size: 1vw;
+  margin: 4% 0;
+}
+#smartphone {
+	color: var(--font);
+	background: var(--wallpaper);
+	position: absolute;
+	width: 20vw;
+	height: 80vh;
+	border: 0.6vw solid var(--border);
+	right: 2vw;
+	/* bottom: -29vw; */
+	border-radius: 2vw;
+	box-shadow: 0 0 1vw var(--border);
+	/* opacity: 0.5; */
+}
+#head {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 1vw;
+	font-size: 0.7vw;
+	border-radius: 1.4vw 1.4vw 0 0;
+}
+#head > div {
+	text-align: center;
+	padding-top: 0.25vw;
+}
+#notch {
+	background-color: #000;
+	min-height: 100%;
+	z-index: 1000;
+	border-bottom-left-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+	width: 50%;
+}
+#clock{
+	border-radius: 1vw 0 0 0;
+}
+#clock,
+#headInfo {
+	width: 25%;
+	
+}
+#headInfo {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 0 1vw 0 0;
+	
+}
+#headInfo i {
+	padding: 0.5vw;
+	
+}
+#homeScreen {
+	min-height: calc(100% - 1vw);
+	position: relative;
+	border-radius: 0 0  1.4vw 1.4vw;
+}
+#appScreen {
+	min-height: calc(100% - 1vw );
+	max-height: calc(100% - 1vw);
+	overflow: auto;
+	position: relative;
+	background: var(--background);
+	border-radius:  0 0 1.4vw 1.4vw;
+	
+}
+#appScreen::-webkit-scrollbar {
+	display: none;
+}
+#appScreen input[type='text']{
+	color: var(--font);
+}
+/* #appScreen input[type='text'] {
+	width: calc(100% - 0.5vw);
+	margin: 0.25vw 0;
+	background-color: var(--background);
+	border: 0;
+	padding: 1vw 0.25vw;
+	color: var(--font);
+	border-radius: 0.25vw;
+	font-size: 0.75vw;
+	color: var(--font);
+} */
+input[type='text']::placeholder{
+  padding: 0 2%;
+  color: var(--font);
+
+}
+#homeButtonDiv {
+	display: flex;
+	justify-content: center;
+}
+#homeButton {
+	position: absolute;
+	bottom: 0;
+	width: 4vw;
+	/* height: 2vw; */
+	/* left: calc(100% / 2 - 1vw); */
+	bottom: 0;
+	border: 0.15vw solid var(--border);
+	/* border-radius: 100%; */
+	background-color: var(--button);
+	opacity: 0.25;
+	margin: 0.5vw 0;
+}
+#homeButton:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+#appScreen,
+#homeButton {
+	display: none;
+}
+#fav,
+#apps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#apps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 4% 4%;
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start; */
+}
+#fav {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 0.5vw);
+	margin: 0.17vw;
+	height: 4vw;
+}
+.app {
+	background-color: #000;
+	width: 3.4vw;
+	height: 3.4vw;
+	margin: 0.5vw;
+	border-radius: 1vw;
+	text-align: center;
+	font-size: 1.5vw;
+	line-height: 3vw;
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+}
+.app:hover {
+	opacity: 0.75;
+}
+#fav > .app {
+	margin: 0.5vw;
+	width: 3.4vw;
+	height: 3.4vw;
+	line-height: 3vw;
+}
+#appPhoneButton {
+	background-color: rgb(22, 109, 19);
+}
+#appPhoneButton i{
+	rotate: 90deg;
+	color: white;
+}

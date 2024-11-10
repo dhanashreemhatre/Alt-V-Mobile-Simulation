@@ -1,0 +1,160 @@
+
+   /* Calendar App Styles */
+   .calendar-app {
+    display: none;
+    height: calc(100% - 24px);
+    background: #f8fafc00;
+    color: #1a1a1a;
+    overflow: hidden;
+  }
+
+  .calendar-header {
+    padding: 16px;
+    background: var(--app-color);
+    color: var(--font);
+  }
+
+  .calendar-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .calendar-nav button {
+    background: none;
+    border: none;
+    color: var(--font);
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 8px 0;
+    background: var(--background);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--font);
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--background);
+    flex-grow: 1;
+  }
+
+  .calendar-day {
+    aspect-ratio: 1;
+    background: var((--background));
+    padding: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .calendar-day.today {
+    background: var(--background);
+    font-weight: 600;
+    color: var(--font);
+  }
+
+  .calendar-day.other-month {
+    color: var(--font);
+  }
+
+  .calendar-day:hover {
+    background: var(--background);
+  }
+
+  .event-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--background);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .add-event {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: var(--background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font);
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: none;
+  }
+
+  .add-event:hover {
+    transform: scale(1.05);
+  }
+  #eventTitle input[type='text'] {
+    background-color: var(--background);
+  }
+  /* Event Modal */
+  .event-modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background);
+    padding: 16px;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-modal input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modal-buttons button.save {
+    background: var(--button);
+    color: var(--button-text);
+  }
+
+  .modal-buttons button.cancel {
+    background: var(--button);
+    color: var(--button-text);
+  }
+

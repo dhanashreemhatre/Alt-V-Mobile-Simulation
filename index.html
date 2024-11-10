@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>smartphone</title>
+  </head>
+  <body>
+    <div id="smartphone">
+      <div id="head">
+        <div id="clock">
+          <div class="time"></div>
+        </div>
+        <div id="notch"></div>
+        <div id="headInfo">
+         
+          <i class="fas fa-battery-full" id="battery"></i>
+          <i class="fas fa-wifi hide-notification-item" id="wifi-signal"></i>
+          <i class="fas fa-signal" id="signal"></i>
+        </div>
+      </div>
+      <!-- Add this right after the <div id="head"> in your HTML -->
+        <div id="notificationPanel" style="display: none;">
+          <div id="head">
+            <div id="clock">
+              <div class="time"></div>
+            </div>
+            <div id="notch"></div>
+            <div id="headInfo">
+             
+              <i class="fas fa-battery-full" id="battery"></i>
+              <i class="fas fa-wifi hide-notification-item" id="wifi-signal2"></i>
+              <i class="fas fa-signal" id="signal2"></i>
+            </div>
+          </div>
+          <!-- Sliders Section -->
+          <div class="slider-module" style="margin-top: 1.5rem;">
+            <div class="icon"><i class="fas fa-sun"></i></div>
+            <input type="range" class="notification-slider" value="80">
+          </div>
+          <div class="slider-module">
+            <div class="icon"><i class="fas fa-volume-up"></i></div>
+            <input type="range" class="notification-slider" value="60">
+          </div>
+        
+        
+          <!-- Control Modules Grid -->
+          <div class="module-grid">
+            <div class="module toggle-button" id="WifiButton">
+              <div class="icon"><i class="fas fa-wifi"></i></div>
+              <div class="label">Wi-Fi</div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+              <div class="label">Cellular</div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-headphones"></i></div>
+              <div class="label">AirPods</div>
+            </div>
+            <div class="module toggle-button" id="appAirplaneButton">
+              <div class="icon"><i class="fas fa-plane"></i></div>
+              <div class="label">Airplane</div>
+            </div>
+            <div class="module large">
+               <!-- Media Player -->
+          <div class="media-player">
+            <img src="./applogo/images.jpeg" class="album-art"></img>
+            <div class="media-info">
+              <div>Now Playing</div>
+              <div style="opacity: 0.8">Artist - Song Title</div>
+            </div>
+            <div class="media-controls">
+              <div><i class="fas fa-backward"></i></div>
+              <div><i class="fas fa-pause music-toggle"></i></div>
+              <div><i class="fas fa-forward"></i></div>
+            </div>
+          </div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-sync-alt"></i></div>
+              <div class="label">Rotation</div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-moon"></i></div>
+              <div class="label">Focus</div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-mobile"></i></div>
+              <div class="label">Screen</div>
+            </div>
+            <div class="module toggle-button">
+              <div class="icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="label">Flashlight</div>
+            </div>
+          </div>
+        
+          <!-- Notifications -->
+          <div class="notification-group">
+            <div class="notification">
+              <div class="icon">💬</div>
+              <div class="notification-content">
+                <div class="notification-title">Messages</div>
+                <div class="notification-text">John: Are you available for a call?</div>
+              </div>
+            </div>
+            <div class="notification">
+              <div class="icon">📅</div>
+              <div class="notification-content">
+                <div class="notification-title">Calendar</div>
+                <div class="notification-text">Team Meeting in 30 minutes</div>
+              </div>
+            </div>
+            <div class="notification">
+              <div class="icon">📧</div>
+              <div class="notification-content">
+                <div class="notification-title">Mail</div>
+                <div class="notification-text">3 new emails</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div id="homeScreen">
+        <div id="apps">
+          <div class="app" id="appAppStoreButton">
+            <!-- <i class="fas fa-calendar"></i> -->
+             <img src="./applogo/app-store.svg" alt="">
+          </div>
+          <div class="app" id="appCalenderButton">
+            <!-- <i class="fas fa-calendar"></i> -->
+             <img src="./applogo/calendar.svg" alt="">
+          </div>
+          <div class="app" id="appWeatherButton">
+            <!-- <i class="fas fa-cloud-sun"></i> -->
+            <img src="./applogo/weather.svg" alt="">
+          </div>
+          <!-- <div class="app" id="appChargeButton">
+            <i class="fas fa-charging-station"></i>
+          </div>
+          <div class="app" id="appAirplaneButton">
+            <i class="fas fa-plane"></i>
+          </div> -->
+          <div class="app" id="appSettingsButton">
+          <img src="./applogo/settings.svg" alt="">
+          </div>
+          <div class="app" id="appGalleryButton">
+          <img src="./applogo/photos.svg" alt="">
+          </div>
+          <div class="app" id="appSafariButton">
+            <img src="./applogo/safari.svg" alt="">
+          </div>
+          <div class="app" id="appClockButton">
+            <img src="./applogo/clock.svg" alt="">
+          </div>
+          <div class="app" id="appNotesButton">
+            <img src="./applogo/notes.svg" alt="">
+          </div>
+          <div class="app" id="appVoiceMemoButton">
+            <img src="./applogo/voice-memos.svg" alt="">
+          </div>
+          <div class="app" id="appCalculatorButton">
+            <img src="./applogo/calculator.svg" alt="">
+          </div>
+          <div class="app" id="appFilesButton">
+            <img src="./applogo/files.svg" alt="">
+          </div>
+          <div class="app" id="appMailButton">
+            <img src="./applogo/mail.svg" alt="">
+          </div>
+        </div>
+        <div id="fav">
+          <div class="app" id="appPhoneButton">
+            <i class="fas fa-phone" style="rotate: 90deg;"></i>
+          </div>
+          <div class="app" id="appContactsButton">
+            <!-- <i class="fas fa-address-book"></i> -->
+            <img src="./applogo/contacts.svg" alt="">
+          </div>
+          <div class="app" id="appMessagesButton">
+            <!-- <i class="fas fa-comment"></i> -->
+            <img src="./applogo/ios-message.svg" alt="">
+          </div>
+          <div class="app" id="appGpsButton">
+            <!-- <i class="fas fa-map-marker-alt"></i> -->
+            <img src="./applogo/camera.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div id="appScreen">
+        <div id="appContacts">
+
+        </div>
+        <!-- CONTACTS -->
+        
+        <div id="appContacts">
+          <div id="appContactsOverview">
+            <h5>Contacts</h5>
+            <input type="text" id="appContactsSearch" placeholder="Search" />
+            <div id="appContactsList"></div>
+          </div>
+          <div id="appContactsEdit">
+            <div id="editContactHead">
+              <i class="fas fa-chevron-left"></i> Contacts
+            </div>
+            <div id="editContactLetter">
+              <span></span>
+            </div>
+            <div id="editContactName"></div>
+            <div id="editContactButtons">
+              <div><i class="fas fa-phone" style="rotate: 90deg;"></i></div>
+              <div><i class="fas fa-comment"></i></div>
+              <div id="editContactDeleteButton">
+                <i class="fas fa-trash"></i>
+              </div>
+            </div>
+            <div id="editContact">
+              <input type="hidden" id="contactId" />
+              <input type="text" id="contactNewName" />
+              <input type="text" id="contactNewPhone" />
+            </div>
+          </div>
+        </div>
+        <!-- CONTACTS END -->
+		 <!-- Settings App -->
+     <div id="appSettings">
+      <div class="settings-header">
+          <h5>Settings</h5>
+          <input type="text" placeholder="Search settings" id="settingsSearch"/>
+      </div>
+
+      <div class="settings-list">
+          <div class="settings-item" data-section="display">
+              <i class="fas fa-desktop"></i>
+              <span>Display & Theme</span>
+          </div>
+          <div class="settings-item" data-section="wallpaper">
+              <i class="fas fa-image"></i>
+              <span>Wallpaper & Style</span>
+          </div>
+          <div class="settings-item" data-section="network">
+              <i class="fas fa-wifi"></i>
+              <span>Network & Internet</span>
+          </div>
+          <div class="settings-item" data-section="battery">
+              <i class="fas fa-battery-full"></i>
+              <span>Battery</span>
+          </div>
+          <div class="settings-item" data-section="sound">
+              <i class="fas fa-volume-up"></i>
+              <span>Sound & Vibration</span>
+          </div>
+          <div class="settings-item" data-section="privacy">
+              <i class="fas fa-shield-alt"></i>
+              <span>Privacy & Security</span>
+          </div>
+          <div class="settings-item" data-section="about">
+              <i class="fas fa-info-circle"></i>
+              <span>About Phone</span>
+          </div>
+      </div>
+
+      <!-- Display & Theme Section -->
+      <div id="display" class="settings-content">
+          <div class="setting-option">
+              <div class="setting-option-header">
+                  <span>Dark Mode</span>
+                  <label class="switch">
+                      <input type="checkbox" id="themeToggle">
+                      <span class="slider"></span>
+                  </label>
+              </div>
+              <div class="setting-description">
+                  Enable dark mode to reduce eye strain in low light conditions
+              </div>
+          </div>
+          <div class="setting-option">
+              <div class="setting-option-header">
+                  <span>Font Size</span>
+                  <select id="fontSize">
+                      <option value="small">Small</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="large">Large</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+
+      <!-- Wallpaper Section -->
+      <div id="wallpaper" class="settings-content">
+          <div class="wallpaper-grid">
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #ff6b6b, #556270)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #4ecdc4, #556270)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #fc354c, #0abfbc)"></div>
+              <div class="wallpaper-option" style="background: linear-gradient(45deg, #4776e6, #8e54e9)"></div>
+          </div>
+      </div>
+      </div>
+<!-- settings app end -->
+
+		<!-- Gallery App -->
+		<div id="appGallery" style="display:none;">
+			<div class="gallery-header">
+			<h5>Photos</h5>
+			<div class="gallery-actions">
+				<i class="fas fa-search"></i>
+				<i class="fas fa-ellipsis-v"></i>
+			</div>
+			</div>
+			<div class="gallery-tabs">
+			<span class="active">Photos</span>
+			<span>Albums</span>
+			<span>Sharing</span>
+			</div>
+			<div class="gallery-grid" id="photoGrid"></div>
+		</div>
+
+
+		 <!-- Messages App Main Screen -->
+		 <div id="appMessages" style="display:none;">
+			<div class="messages-header">
+			  <h5>Messages</h5>
+			  <div class="message-actions">
+				<i class="fas fa-edit" id="newMessageBtn"></i>
+			  </div>
+			</div>
+			<div class="messages-search">
+			  <input type="text" placeholder="Search messages" id="messageSearchInput"/>
+			</div>
+			<div class="messages-list" id="messagesList">
+			  <!-- Messages list will be populated here -->
+			</div>
+		  </div>
+		
+		  <!-- Individual Chat Screen -->
+		  <div id="chatScreen" style="display:none;">
+			<div class="chat-header">
+			  <div class="chat-header-left">
+				<i class="fas fa-chevron-left" id="backToMessages"></i>
+				<div class="chat-contact">
+          <img src="./applogo/images.jpeg" class="chat-contact-img">
+				  <div class="chat-contact-name"></div>
+				</div>
+			  </div>
+			  <div class="chat-header-right">
+				<i class="fas fa-video"></i>
+			  </div>
+			</div>
+
+			
+			<div class="chat-messages" id="chatMessages">
+			  <!-- Chat messages will be populated here -->
+			</div>
+      <div class="chat-input-container">
+			<div class="chat-input-area">
+			  <div class="chat-attachments">
+				<i class="fas fa-camera"></i>
+				<i class="fas fa-image"></i>
+				<i class="fas fa-map-marker-alt"></i>
+				<i class="fas fa-microphone"></i>
+			  </div>
+			  <div class="chat-input-wrapper">
+				<input type="text" placeholder="iMessage" id="messageInput"/>
+				<i class="fas fa-paper-plane" id="sendMessage"></i>
+			  </div>
+			</div>
+      </div>
+		  </div>
+		
+		  <!-- New Message Screen -->
+		  <div id="newMessageScreen" style="display:none;">
+			<div class="new-message-header">
+			  <i class="fas fa-chevron-left" id="backFromNew"></i>
+			  <h5>New Message</h5>
+			</div>
+			<div class="new-message-to">
+			  <span>To:</span>
+			  <input type="text" id="newMessageRecipient" placeholder="Enter name or number"/>
+			</div>
+			<div class="suggested-contacts" id="suggestedContacts">
+			  <!-- Suggested contacts will appear here -->
+			</div>
+		  </div>
+		
+		  <!-- Attachment Preview -->
+		  <div id="attachmentPreview" style="display:none;">
+			<div class="attachment-header">
+			  <i class="fas fa-times" id="closeAttachment"></i>
+			  <div class="attachment-actions">
+				<i class="fas fa-crop"></i>
+				<i class="fas fa-adjust"></i>
+				<i class="fas fa-magic"></i>
+			  </div>
+			</div>
+			<div class="attachment-content">
+			  <!-- Preview content goes here -->
+			</div>
+			<div class="attachment-footer">
+			  <button id="cancelAttachment">Cancel</button>
+			  <button id="sendAttachment">Send</button>
+			</div>
+		  </div>
+		   <!-- Phone App Main Screen -->
+  <div id="phoneApp" style="display:none;">
+    <div class="phone-tabs">
+      <div class="tab active" data-tab="favorites">
+        <i class="fas fa-star"></i>
+        <span>Favorites</span>
+      </div>
+      <div class="tab" data-tab="recents">
+        <i class="fas fa-clock"></i>
+        <span>Recents</span>
+      </div>
+      <div class="tab" data-tab="contacts">
+        <i class="fas fa-address-book"></i>
+        <span>Contacts</span>
+      </div>
+      <div class="tab" data-tab="keypad">
+        <i class="fas fa-th"></i>
+        <span>Keypad</span>
+      </div>
+    </div>
+
+    <!-- Favorites Screen -->
+    <div class="phone-screen active" id="favoritesScreen">
+      <div class="favorites-list">
+        <!-- Favorites will be populated here -->
+      </div>
+      <button class="add-favorite-btn">
+        <i class="fas fa-plus"></i> Add Favorite
+      </button>
+    </div>
+
+    <!-- Recents Screen -->
+    <div class="phone-screen" id="recentsScreen">
+      <div class="recents-list">
+        <!-- Recent calls will be populated here -->
+      </div>
+      <button class="clear-recents-btn">
+        <i class="fas fa-trash"></i> Clear
+      </button>
+    </div>
+
+    <!-- Contacts Screen -->
+    <div class="phone-screen" id="contactsScreen">
+      <div class="contacts-search">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search Contacts" id="contactSearchInput"/>
+      </div>
+      <div class="contacts-list">
+        <!-- Contacts will be populated here -->
+      </div>
+      <button class="add-contact-btn">
+        <i class="fas fa-plus"></i> Add Contact
+      </button>
+    </div>
+
+    <!-- Keypad Screen -->
+    <div class="phone-screen" id="keypadScreen">
+      <div class="keypad-display">
+        <input type="tel" id="phoneNumber" readonly/>
+        <i class="fas fa-backspace" id="backspace"></i>
+      </div>
+      <div class="keypad-grid">
+        <!-- Keypad buttons will be generated here -->
+      </div>
+      <button class="call-btn">
+        <i class="fas fa-phone" style="rotate: 90deg;"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Call Screen -->
+  <div id="callScreen" style="display:none;">
+    <div class="call-info">
+      <div class="caller-name" style="text-align: center;">John Doe</div>
+      <div class="call-status" style="text-align: center;">Calling...</div>
+      <div class="call-timer" style="text-align: center;">00:00</div>
+    </div>
+    <div class="caller-avatar">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="call-actions">
+      <button class="mute-btn">
+        <i class="fas fa-microphone-slash"></i>
+      </button>
+      <button class="keypad-btn">
+        <i class="fas fa-th"></i>
+      </button>
+      <button class="speaker-btn">
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <button class="add-call-btn">
+        <i class="fas fa-plus"></i>
+      </button>
+      <button class="end-call-btn">
+        <i class="fas fa-phone-slash"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Calendar App -->
+   <div id="calendarApp" class="calendar-app" style="display:none;">
+    <div class="calendar-header">
+      <div class="calendar-title">Calendar</div>
+      <div id="currentMonth"></div>
+      <div class="calendar-nav">
+        <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    
+    <div class="weekdays">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    
+    <div class="calendar-grid"></div>
+    
+    <button class="add-event">+</button>
+  </div>
+
+  <!-- Event Modal -->
+  <div class="event-modal">
+    <h3>Add Event</h3>
+    <input type="text" id="eventTitle" placeholder="Event title">
+    <input type="time" id="eventTime">
+    <div class="modal-buttons">
+      <button class="cancel">Cancel</button>
+      <button class="save">Save</button>
+    </div>
+  </div>
+
+      </div>
+
+      <div id="homeButtonDiv"><div id="homeButton"></div></div>
+    </div>
+    <script>
+      
+	</script>
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
