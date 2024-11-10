@@ -11,7 +11,7 @@ function showGalleryApp() {
 $(document).ready(function() {
     $('#appGalleryButton').on('click', function() {
       // Hide any other open apps
-      $('#appContacts, #appSettings, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
+      $('#appContacts,#appCamera, #appSettings, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
       .hide();
       $('#homeScreen').hide();
       $('#appScreen').show();

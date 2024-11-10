@@ -141,7 +141,7 @@ $('#appSettingsButton').on('click', function() {
     updateHeaderColors();
     
     // Hide any other open apps
-    $('#appContacts,#appCalls,#appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
+    $('#appContacts,#appCamera,#appCalls,#appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
         .hide();
 });
 

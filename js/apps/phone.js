@@ -21,7 +21,7 @@
     $('#phoneApp').show();
 
     // Hide any other open apps
-    $('#appContacts, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
+    $('#appContacts,#appCamera, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
       .hide();
     
     // Initialize phone app if it hasn't been initialized yet

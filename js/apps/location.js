@@ -11,7 +11,7 @@ function showLocationApp() {
 $(document).ready(function() {
     $('#appGpsButton').on('click', function() {
       // Hide any other open apps
-      $('#appContacts, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
+      $('#appContacts,#appCamera, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
       .hide();
       $('#homeScreen').hide();
       $('#appScreen').show();

@@ -187,7 +187,7 @@
  $(document).ready(function() {
    $('#appCalenderButton').on('click', function() {
      // Hide any other open apps
-     $('#appContacts,#phoneApp, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
+     $('#appContacts,#appCamera,#phoneApp, #appSettings, #appGallery, #widgetsPanel, #appMessages, #chatScreen, #newMessageScreen, #attachmentPreview')
      .hide();
      $('#homeScreen').hide();
      $('#appScreen').show();
